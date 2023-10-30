@@ -1,0 +1,53 @@
+
+.right input {
+    font-weight: bold;
+
+}
+#right{
+    background-color: rgb(245,245,220,0.5);
+    height: 700px;
+    font-weight: bold;
+}
+.update{
+    text-align: center;
+}
+
+.main {
+    background: url("https://mcdn.coolmate.me/uploads/December2021/spa-thu-cung-tphcm_39.png");
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+}
+#abc a{
+
+}
+
+
+.list-group {
+
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 700px;
+}
+
+.accordion-collapse {
+    background-color: rgb(255,160,122, 0.1);
+
+}
+.accordion-collapse a{
+    font-weight: bold;
+}
+
+#flush-collapseOne{
+    border-bottom-right-radius: 20px;
+}
+
+img {
+    border-top-right-radius: 20px;
+}
+
+p {
+    padding: 0px;
+}

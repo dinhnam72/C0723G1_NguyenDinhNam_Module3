@@ -30,10 +30,10 @@ public class LoginServlet extends HttpServlet {
 
     private void createUser(HttpServletRequest request, HttpServletResponse response) {
         String userName = request.getParameter("userName");
-        String passWork = request.getParameter("pass");
+        String passwork = request.getParameter("pass");
         Date date = new Date();
         DateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        if (userName.equals("admin") && passWork.equals("123abc")){
+        if (userName.equals("admin") && passwork.equals("123abc")){
             request.setAttribute("date",dateFormat.format(date));
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("succes.jsp");
             try {
