@@ -11,4 +11,5 @@ public interface IBookService {
     void removeBook(int id);
     List<Book> searchBook(String title);
     Book findById(int id);
+    List<Book> sort(int sortTitle);
 }

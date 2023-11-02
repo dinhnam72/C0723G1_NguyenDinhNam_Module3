@@ -1,7 +1,7 @@
-package com.example.bt.repository;
+package com.example.bt.repository.repositoryimpl;
 
 import com.example.bt.model.Author;
-import com.example.bt.model.Category;
+import com.example.bt.repository.IAuthorRepository;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AuthorRepository implements IAuthorRepository{
+public class AuthorRepository implements IAuthorRepository {
     private static final String SELECT_AUTHOR = "SELECT * FROM authors";
     @Override
     public List<Author> display() {

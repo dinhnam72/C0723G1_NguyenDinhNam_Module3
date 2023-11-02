@@ -1,6 +1,8 @@
-package com.example.bt.repository;
+package com.example.bt.repository.repositoryimpl;
 
 import com.example.bt.model.Category;
+import com.example.bt.repository.ICategoryRepository;
+import com.example.bt.repository.repositoryimpl.BaseRepository;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -9,7 +11,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryRepository implements ICategoryRepository{
+public class CategoryRepository implements ICategoryRepository {
     private static final String SELECT_CATEGORY = "SELECT * FROM category";
     @Override
     public List<Category> display() {

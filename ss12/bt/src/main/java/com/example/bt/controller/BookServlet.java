@@ -4,13 +4,14 @@ import com.example.bt.model.Author;
 import com.example.bt.model.Book;
 import com.example.bt.model.Category;
 import com.example.bt.service.*;
-import jdk.nashorn.internal.ir.IfNode;
+import com.example.bt.service.serviceimpl.AuthorService;
+import com.example.bt.service.serviceimpl.BookService;
+import com.example.bt.service.serviceimpl.CategoryService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "BookServlet", value = "/book")
 public class BookServlet extends HttpServlet {
@@ -24,6 +25,9 @@ public class BookServlet extends HttpServlet {
             action="";
         }
         switch (action){
+            case "sort":
+                sort(request,response);
+                break;
             case "create":
                 formCreate(request,response);
             case "update":
@@ -32,6 +36,21 @@ public class BookServlet extends HttpServlet {
             default:
                 display(request,response);
         }
+    }
+
+    private void sort(HttpServletRequest request, HttpServletResponse response) {
+        int sort = Integer.parseInt(request.getParameter("sort"));
+
+        request.setAttribute("bookList",bookService.sort(sort));
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("display.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private void formCreate(HttpServletRequest request, HttpServletResponse response) {

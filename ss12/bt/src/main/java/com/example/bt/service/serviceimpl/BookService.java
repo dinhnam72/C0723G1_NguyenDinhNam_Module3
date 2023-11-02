@@ -1,11 +1,12 @@
-package com.example.bt.service;
+package com.example.bt.service.serviceimpl;
 
 import com.example.bt.model.Book;
-import com.example.bt.repository.BookRepository;
+import com.example.bt.repository.repositoryimpl.BookRepository;
+import com.example.bt.service.IBookService;
 
 import java.util.List;
 
-public class BookService implements IBookService{
+public class BookService implements IBookService {
     private BookRepository bookRepository = new BookRepository();
     @Override
     public List<Book> display() {
@@ -36,5 +37,10 @@ public class BookService implements IBookService{
     @Override
     public Book findById(int id) {
         return bookRepository.findById(id);
+    }
+
+    @Override
+    public List<Book> sort(int sortTitle) {
+        return bookRepository.sort(sortTitle);
     }
 }

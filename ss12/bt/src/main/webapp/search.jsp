@@ -33,8 +33,8 @@
                     <td>${look.count}</td>
                     <td>${b.title}</td>
                     <td>${b.pageSize}</td>
-                    <td>${b.author}</td>
-                    <td>${b.category}</td>
+                    <td>${b.author.authorName}</td>
+                    <td>${b.category.categoryName}</td>
                 </tr>
             </c:forEach>
             </tbody>

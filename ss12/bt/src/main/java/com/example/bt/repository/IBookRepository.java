@@ -11,4 +11,5 @@ public interface IBookRepository {
     void removeBook(int id);
     List<Book> seachrBook(String title);
     Book findById(int checkId);
+    List<Book> sort(int sortTitle);
 }

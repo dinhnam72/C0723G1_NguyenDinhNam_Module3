@@ -20,6 +20,17 @@
     <input class="form-control me-2" type="search" placeholder="Nhap ten sach"  name="title">
     <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
+
+<div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+        Sắp xếp
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/book?action=sort&sort=1">Tên tăng dần</a></li>
+        <li><a class="dropdown-item" href="/book?action=sort&sort=2">Tên giảm dần</a></li>
+    </ul>
+</div>
+
 <form action="/book" method="post">
     <table class="table table-light table-hover" style="width: 100%; text-align: center">
         <thead>
